@@ -9,4 +9,4 @@ function init() {
     gapi.auth2.init(inf);
   });
 }
-init();
+window.onload = init();

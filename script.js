@@ -17,4 +17,13 @@ function init(){
             console.log('inited');
         });
     }
+    GoogleAuth.then(onInit, onError);
+ }
+
+ function onError(){
+    alert('error!');
+ }
+
+ function onInit(){
+     alert('success');
  }

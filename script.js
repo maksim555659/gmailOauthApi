@@ -6,7 +6,7 @@ function init() {
         scope: 'https://www.googleapis.com/auth/userinfo.profile',
         redirect_uri: 'https://maksim555659.github.io/index.html'
     }
-    gapi.auth2.init(inf)
+    gapi.auth2.init(inf);
   });
 }
 init();

@@ -1,3 +1,4 @@
+
 function init() {
   gapi.load('auth2', function() {
     /* Ready. Make a call to gapi.auth2.init or some other API */
@@ -10,3 +11,4 @@ function init() {
     console.log('inited');
   });
 }
+init();

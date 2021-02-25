@@ -1,5 +1,13 @@
 document.onreadystatechange = init;
 
+let authButton = document.getElementById('auth');
+
+authButton.onclick = auth;
+
+function auth(){
+    GoogleAuth.signIn()
+}
+
 function init(){
     if(document.readyState === 'complete'){
         gapi.load('auth2', function () {

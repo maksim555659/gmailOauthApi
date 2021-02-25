@@ -7,5 +7,6 @@ function init() {
         redirect_uri: 'https://maksim555659.github.io/index.html'
     }
     gapi.auth2.init(inf);
+    console.log('inited');
   });
 }

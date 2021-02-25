@@ -1,4 +1,4 @@
-document.onreadystatechange = init();
+document.onreadystatechange = init;
 
 function init(){
     if(document.readyState === 'complete'){

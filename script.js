@@ -1,4 +1,6 @@
-document.onreadystatechange = function(){
+document.onreadystatechange = init();
+
+function init(){
     if(document.readyState === 'complete'){
         gapi.load('auth2', function () {
             gapi.auth2.init({

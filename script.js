@@ -1,6 +1,6 @@
 document.onreadystatechange = init;
 
-var GoogleAuth = gapi.auth2.getAuthInstance();
+var GoogleAuth = null;
 let authButton = document.getElementById('auth');
 
 authButton.onclick = auth;
@@ -12,11 +12,11 @@ function init(){
                 client_id: '585715093898-32c8ahpkv4jmefeksqff4ev8eionufes.apps.googleusercontent.com',
                 scope: 'https://www.googleapis.com/auth/userinfo.profile'
             });
-
             console.log('inited');
+            GoogleAuth = gapi.auth2.getAuthInstance();
+            GoogleAuth.then(onInit, onError);
         });
     }
-    GoogleAuth.then(onInit, onError);
  }
 
  function auth(){

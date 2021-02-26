@@ -1,6 +1,7 @@
 document.onreadystatechange = init;
 
 var GoogleAuth = null;
+var GoogleUser = null;
 let authButton = document.getElementById('auth');
 
 authButton.onclick = auth;
@@ -14,6 +15,7 @@ function init(){
             });
             console.log('inited');
             GoogleAuth = gapi.auth2.getAuthInstance();
+            GoogleUser = GoogleAuth.currentUser.get();
             GoogleAuth.then(onInit, onError);
         });
     }
@@ -24,9 +26,9 @@ function init(){
 }
 
  function onError(){
-    alert('error!');
+    console.log('error!')
  }
 
  function onInit(){
-     alert('success');
+     console.log('success');
  }

@@ -15,20 +15,21 @@ function init(){
             });
             console.log('inited');
             GoogleAuth = gapi.auth2.getAuthInstance();
-            GoogleUser = GoogleAuth.currentUser.get();
             GoogleAuth.then(onInit, onError);
         });
     }
  }
 
  function auth(){
-    GoogleAuth.signIn()
+    GoogleAuth.signIn();
+    GoogleUser = GoogleAuth.currentUser.get();
+    console.log(GoogleUser);
 }
 
  function onError(){
-    console.log('error!')
+    console.log('GoogleAuth initialization error!');
  }
 
  function onInit(){
-     console.log('success');
+    console.log('GoogleAuth fully initialized');
  }
